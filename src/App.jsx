@@ -18,7 +18,7 @@ function App() {
       </div>
 
       <h1>Vite + React!!!!!!!!!!!</h1>
-=======
+
       <h1>Vite + React + Jesse</h1>
 
       <div className="card">
