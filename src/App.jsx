@@ -3,12 +3,23 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import NavBar from './Componets/NavBar'
+
+import Home from './HomePage'
+main
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+
+  
+   <div className="top"><Home/></div> 
+    
+
     <>
       <div>
+        <NavBar/>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -37,7 +48,9 @@ function App() {
         Click on the Vite and React logos to learn more!!!
       </p>
     </>
+
   )
 }
 
 export default App
+
