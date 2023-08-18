@@ -18,8 +18,12 @@ function App() {
       </div>
 
       <h1>Vite + React!!!!!!!!!!!</h1>
-=======
+ Shaka
+
+      <h1>Vite + React + Jesse</h1>
+
       <h1>Vite + React + Jesse Attempt 2</h1>
+ main
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
