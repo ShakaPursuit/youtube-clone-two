@@ -4,8 +4,9 @@
 
 
 
-    return (<>
-   <div>
+    return (
+    <div className="container">
+  
     <header className="header">
 
 
@@ -16,11 +17,13 @@
 
 
 
-    </header>
-    </div>
+    </header><br></br><br></br>
+  
 
    <>
-   <input type="text" ></input><button>Search</button>
+   <input className="sB"type="text" ></input><button>Search</button><br></br>
+   <br></br><br></br><br></br>
+   
    
    
    </>
@@ -34,9 +37,9 @@
     
     
     
+    </div>
     
-    
-    </>);
+   );
  
 
 
