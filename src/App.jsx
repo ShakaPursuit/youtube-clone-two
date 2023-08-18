@@ -14,11 +14,11 @@ function App() {
   return (
 
   
-   <div className="top"><Home/></div> 
     
-
+    
     <>
       <div>
+      <div className="top"><Home/></div> 
         <NavBar/>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
