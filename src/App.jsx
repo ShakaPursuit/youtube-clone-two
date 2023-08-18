@@ -19,7 +19,7 @@ function App() {
 
       <h1>Vite + React!!!!!!!!!!!</h1>
  Shaka
-
+      <h1>Christine</h1>
       <h1>Vite + React + Jesse</h1>
 
       <h1>Vite + React + Jesse Attempt 2</h1>
