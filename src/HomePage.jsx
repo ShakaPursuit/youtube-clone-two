@@ -21,7 +21,7 @@
   
 
    <>
-   <input className="sB"type="text" ></input><button>Search</button><br></br>
+   <input className="sBg"type="text" ></input><button>Search</button><br></br>
    <br></br><br></br><br></br>
    
    
