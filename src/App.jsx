@@ -2,12 +2,21 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+
 import NavBar from './Componets/NavBar'
+
+import Home from './HomePage'
+main
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+
+  
+   <div className="top"><Home/></div> 
+    
+
     <>
       <div>
         <NavBar/>
@@ -21,7 +30,7 @@ function App() {
 
       <h1>Vite + React!!!!!!!!!!!</h1>
  Shaka
-
+      <h1>Christine</h1>
       <h1>Vite + React + Jesse</h1>
 
       <h1>Vite + React + Jesse Attempt 2</h1>
@@ -39,7 +48,9 @@ function App() {
         Click on the Vite and React logos to learn more!!!
       </p>
     </>
+
   )
 }
 
 export default App
+
