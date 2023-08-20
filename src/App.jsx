@@ -1,56 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+
 import './App.css'
 
-import NavBar from './Componets/NavBar'
 
-import Home from './HomePage'
-main
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
 
+
+
+
+
+fetch ("https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyDNyDPFuphvxkXMK-2JUb22KqkfdpICOTw")          
+  .then(response => response.json())
+  .then(data => console.log(data));
   return (
+  
+<div className="input-group">
+  
+  <input 
+  type="search" 
+  className="form-control" 
+  placeholder="Search..." 
+  aria-label="Search" 
+  aria-describedby="basic-addon1"/>
+</div>
+  
+)
+
+
+return (
+
+    <div>App</div>
+
+)
+  }
 
   
-   <div className="top"><Home/></div> 
-    
 
-    <>
-      <div>
-        <NavBar/>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-       <></>
-      <h1>Vite + React!!!!!!!!!!!</h1>
- Shaka
-      <h1>Christine</h1>
-      <h1>Vite + React + Jesse</h1>
 
-      <h1>Vite + React + Jesse Attempt 2</h1>
- main
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more!!!
-      </p>
-    </>
-
-  )
-}
-
-export default App
 
