@@ -2,17 +2,29 @@
 
 import './App.css'
 
+import axios from 'axios';
 
+import SingleVideo from './Componets/SingleVideo';
 
 export default function App() {
 
 
 
 
+  function SingleVideo () {
+    async function fetch () {
+     
+      try {
+        let result = await axios.get ("https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&q=arianagrande&key=AIzaSyDNyDPFuphvxkXMK-2JUb22KqkfdpICOTw")
+     console.log(result);     
+ 
+  }
+catch (error){
+   console.log(error);
 
-fetch ("https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyDNyDPFuphvxkXMK-2JUb22KqkfdpICOTw")          
-  .then(response => response.json())
-  .then(data => console.log(data));
+}
+
+}
   return (
   
 <div className="input-group">
@@ -25,17 +37,20 @@ fetch ("https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyDNyDPFuphvxkX
   aria-describedby="basic-addon1"/>
 </div>
   
-)
-
+    )
+ 
+  }
 
 return (
 
-    <div>App</div>
+    <div>App
+    <SingleVideo />
 
-)
-  }
+    </div>
+  )
+}
 
-  
+
 
 
 
