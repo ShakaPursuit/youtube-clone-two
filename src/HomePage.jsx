@@ -4,6 +4,11 @@ import ShowPage from "./Show";
 import TopBar from "./TopBar";
 import Videos from "./Videos";
 
+import SearchBar from "./SearchBar";
+import ShowPage from "./Show";
+import TopBar from "./TopBar";
+import Videos from "./Videos";
+
 
  
  
@@ -42,7 +47,11 @@ return(<>
 
 
 </main>
+
+<ShowPage/>
+
 {/* <ShowPage/> */}
+
 
 
 
