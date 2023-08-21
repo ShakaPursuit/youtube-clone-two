@@ -6,14 +6,6 @@ import { useRef } from 'react';
 
 export default function ShowPage(){
 
-
-
-
-
-
-
-
-
     const [value, setValue] = useState("");
     const[commenter,SetCommenter]=useState('')
     const[empty,SetEmpty]=useState('')
@@ -42,13 +34,7 @@ export default function ShowPage(){
     return (
         <>
 
-
-        <div></div>
-
-
-
-
-
+        <div> Show Page Video goes in this div</div>
 
 <form>
       <div className="comment-section">
