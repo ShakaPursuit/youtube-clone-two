@@ -1,8 +1,14 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 2rem;
-  text-align: center;
+  /* text-align: center; */
+  display: grid;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .logo {
@@ -11,9 +17,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +30,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -40,5 +49,51 @@
 .read-the-docs {
   color: #888;
 }
- .header{display:flex}
- .header{border:2px solid red}
+
+/* .header{display:flex} */
+.header {
+  border: 2px solid yellow;
+  background: var(--dark);
+    border-bottom: 3px solid var(--primary);
+    color: var(--light);
+    padding: 25px 0;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.696);
+    width: auto;
+    border :3px solid black
+}
+
+body {
+  background-color: red;
+}
+
+.container {
+  grid-template-columns: 1fr 1fr ;
+
+  display: grid;
+
+
+
+}
+
+.header {
+  width: 100%;
+  overflow: hidden;
+  /* contain floats */
+  height: 25px;
+  margin-top: 0;
+  display: flex;
+}
+
+.videos {
+  border: 1px solid grey;
+  border-radius: 15px;
+}
+
+.sB {
+  width: 75%;
+  height:25px;
+}
+
+.icon{height: 50px;position: relative; top: -15px; }
+.comment-section{border:2px solid white;height:50%;}

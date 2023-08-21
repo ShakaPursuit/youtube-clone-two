@@ -1,43 +1,56 @@
+
+import SearchBar from "./SearchBar";
+import ShowPage from "./Show";
+import TopBar from "./TopBar";
+import Videos from "./Videos";
+
+
+ 
+ 
+ 
+
  function Home(){
 
 
 
+return(<>
+<TopBar/>
 
 
-    return (<>
-   <div>
-    <header className="header">
+<main className="wrapper">
+    <br></br>
+
+   <section><SearchBar/></section> 
+
+   <br></br><br></br>
 
 
-        <a>Youtube</a><br></br><br></br>&nbsp; 
-        <a>Home</a><br></br>&nbsp; 
-        <a>About</a>
-     
-
-
-
-    </header>
-    </div>
-
-   <>
-   <input type="text" ></input><button>Search</button>
-   
-   
-   </>
-
-
-{/*  */}
+   <section><Videos/></section>
 
   
 
-    <div className="videos">No Search Results Yet! Please Submit a search above!</div>
-    
-    
-    
-    
-    
-    </>);
  
+
+
+
+
+
+
+
+
+
+
+
+</main>
+<ShowPage/>
+
+
+
+
+</>);
+
+
+
 
 
 }

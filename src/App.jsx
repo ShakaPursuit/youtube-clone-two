@@ -26,8 +26,7 @@ catch (error){
 
 }
   return (
-  
-<div className="input-group">
+
   
   <input 
   type="search" 
@@ -35,7 +34,7 @@ catch (error){
   placeholder="Search..." 
   aria-label="Search" 
   aria-describedby="basic-addon1"/>
-</div>
+
   
     )
  
@@ -43,7 +42,7 @@ catch (error){
 
 return (
 
-    <div>App
+    <div className="App">
     <SingleVideo />
 
     </div>
