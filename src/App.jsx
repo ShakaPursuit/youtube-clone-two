@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-import SearchComponent from './SearchComponent'
-import VideoDetailPage from './ShowPage'
+import SearchComponent from './Componets/SearchComponent'
+import VideoDetailPage from './Componets/ShowPage'
 
 import NavBar from './Componets/NavBar'
 
-import Home from './HomePage'
+import Home from './Componets/HomePage'
 
 
 function App() {
@@ -15,7 +15,6 @@ function App() {
     <Router>
       <div className="top"><Home/></div> 
       <Routes>
-  <Route path="/" element={<SearchComponent />} />
   <Route path="/video/:videoId" element={<VideoDetailPage />} />
   </Routes>
     </Router>

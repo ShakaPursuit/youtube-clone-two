@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from './Componets/NavBar'
+import NavBar from './NavBar'
 
 function AboutPage() {
   return (
