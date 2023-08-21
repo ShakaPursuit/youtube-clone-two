@@ -13,7 +13,9 @@ function App() {
   return (
 
     <Router>
-        <div className="top"><Home/></div> 
+
+      <div className="top"><Home/></div> 
+
       <Routes>
   <Route path="/" element={<SearchComponent />} />
   <Route path="/video/:videoId" element={<VideoDetailPage />} />
@@ -21,6 +23,7 @@ function App() {
 
   </Routes>
     </Router>
+
 
 
   
