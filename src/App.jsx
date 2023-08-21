@@ -6,7 +6,7 @@ import './App.css'
 import NavBar from './Componets/NavBar'
 
 import Home from './HomePage'
-main
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,22 +14,21 @@ function App() {
   return (
 
   
-   <div className="top"><Home/></div> 
-    
+   
     
     <>
       <div>
       <div className="top"><Home/></div> 
-        <NavBar/>
-        <a href="https://vitejs.dev" target="_blank">
+        {/* <NavBar/> */}
+        {/* <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        </a> */}
       </div>
-       <></>
-      <h1>Vite + React!!!!!!!!!!!</h1>
+     
+      {/* <h1>Vite + React!!!!!!!!!!!</h1>
  
       <h1>Christine</h1>
       <h1>Vite + React + Jesse</h1>
@@ -47,7 +46,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more!!!
-      </p>
+      </p> */}
     </>
 
   )
