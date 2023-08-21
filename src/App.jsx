@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <div className="top"><Home/></div> 
-        {/* <NavBar/> */}
       <Routes>
   <Route path="/" element={<SearchComponent />} />
   <Route path="/video/:videoId" element={<VideoDetailPage />} />
