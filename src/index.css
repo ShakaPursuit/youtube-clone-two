@@ -29,6 +29,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  grid-template-areas: "head head head"
+  "main main main";
 }
 
 h1 {
@@ -67,3 +70,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
