@@ -11,7 +11,6 @@ import Home from './Componets/HomePage'
 function App() {
  
   return (
-
     <Router>
       <div className="top"><Home/></div> 
       <Routes>
