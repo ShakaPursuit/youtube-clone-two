@@ -2,52 +2,52 @@
 
 import './App.css'
 
-import axios from 'axios';
-
-import SingleVideo from './Componets/SingleVideo';
-
-export default function App() {
 
 
+// import SingleVideo from './Componets/SingleVideo';
+
+// export default function App() {
 
 
-  function SingleVideo () {
-    async function fetch () {
+
+
+//   function SingleVideo () {
+//     async function fetch () {
      
-      try {
-        let result = await axios.get ("https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&q=arianagrande&key=AIzaSyDNyDPFuphvxkXMK-2JUb22KqkfdpICOTw")
-     console.log(result);     
+//       try {
+//         let result = await axios.get ("https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&q=arianagrande&key=AIzaSyDNyDPFuphvxkXMK-2JUb22KqkfdpICOTw")
+//      console.log(result);     
  
-  }
-catch (error){
-   console.log(error);
+//   }
+// catch (error){
+//    console.log(error);
 
-}
+// }
 
-}
-  return (
+// }
+//   return (
 
   
-  <input 
-  type="search" 
-  className="form-control" 
-  placeholder="Search..." 
-  aria-label="Search" 
-  aria-describedby="basic-addon1"/>
+//   <input 
+//   type="search" 
+//   className="form-control" 
+//   placeholder="Search..." 
+//   aria-label="Search" 
+//   aria-describedby="basic-addon1"/>
 
   
-    )
+//     )
  
-  }
+//   }
 
-return (
+// return (
 
-    <div className="App">
-    <SingleVideo />
+//     <div className="App">
+//     <SingleVideo />
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
 
 
