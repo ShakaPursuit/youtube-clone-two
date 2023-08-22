@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import ShowPage from "./Show";
 
 // iframe is an HTML element used to embed content from a third party source
 // in this case it embed the youtube video with the dynamic videoId
@@ -10,10 +11,13 @@ const VideoDetailPage = () => {
     const { videoId } = useParams();
 
     return (
-        <div>
+        <>
+        <div className="single-video">
         <iframe width="560" height="315" src={`https://www.youtube.com/embed/${videoId}`} title="Youtube Video" allowFullScreen></iframe>
-        <h3>Video Title</h3>
         </div>
+        <ShowPage />
+        </>
     )
+
 }
 export default VideoDetailPage

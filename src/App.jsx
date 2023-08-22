@@ -1,21 +1,21 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
-import SearchComponent from './Componets/SearchComponent'
-import VideoDetailPage from './Componets/ShowPage'
-
-import NavBar from './Componets/NavBar'
+import VideoDetailPage from './Componets/VideoDetailPage'
+import TopBar from './Componets/TopBar'
+import AboutPage from './Componets/AboutPage'
 
 import Home from './Componets/HomePage'
 
 
 function App() {
- 
   return (
     <Router>
-      <div className="top"><Home/></div> 
+          <TopBar />
       <Routes>
-  <Route path="/video/:videoId" element={<VideoDetailPage />} />
-  </Routes>
+      <Route path="/" element={<Home/> } />
+      <Route path="/video/:videoId" element={<VideoDetailPage />} />
+      <Route path="/about" element={<AboutPage />} />
+      </Routes>
     </Router>
   )
 }
