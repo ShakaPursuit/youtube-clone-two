@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import ShowPage from "./Show";
 import TopBar from "./TopBar";
 import Videos from "./Videos";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
  
