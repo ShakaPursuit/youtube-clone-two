@@ -2,17 +2,6 @@
 import { useState } from "react";
 import { useRef } from 'react';
 export default function ShowPage(){
-
-
-
-
-
-
-
-
-
-
-
     const [value, setValue] = useState("");
     const [commenter,SetCommenter]=useState('')
     const [arr, setArr] = useState([]);
