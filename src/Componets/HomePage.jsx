@@ -1,20 +1,20 @@
-import SearchComponent from "./SearchComponent";
+// import SearchComponent from "./SearchComponent";
 
- function Home(){
+//  function Home(){
 
-return(<>
+// return(<>
 
-<main className="wrapper">
-    <br></br>
+// <main className="wrapper">
+//     <br></br>
 
-   <section><SearchComponent/></section> 
+//    <section><SearchComponent/></section> 
 
-   <br></br><br></br>
+//    <br></br><br></br>
 
-</main>
+// </main>
 
-</>);
+// </>);
 
-}
+// }
 
-export default Home
+// export default Home

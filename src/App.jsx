@@ -5,7 +5,7 @@ import TopBar from './Componets/TopBar'
 import AboutPage from './Componets/AboutPage'
 
 
-import NavBar from './Componets/NavBar'
+
 
 import Home from './HomePage'
 
