@@ -1,11 +1,11 @@
-import SearchBar from "./SearchBar";
-import TopBar from "./TopBar";
+import SearchBar from "./SearchComponent";
+
 import Videos from "./Videos";
 
 function Home() {
   return (
     <>
-      <TopBar />
+     
 
       <main className="wrapper">
         <br></br>
