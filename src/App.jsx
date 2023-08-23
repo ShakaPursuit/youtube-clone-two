@@ -17,8 +17,13 @@ function App() {
       <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Router>
+
   )
 }
 
 export default App
+
+
+
+
 
