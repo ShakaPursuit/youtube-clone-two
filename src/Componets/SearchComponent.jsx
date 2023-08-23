@@ -40,7 +40,7 @@ const SearchComponent = () => {
       <div className="video-list">
         {videos.map((video) => (
           <div key={video.id.videoId} className="video-item">
-            <Link to={`/video/${video.id.videoId}`}>
+            <Link to={`/video/${video.id.videoId}`} >
               <img
                 src={video.snippet.thumbnails.default.url}
                 alt={video.snippet.title}
