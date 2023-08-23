@@ -4,11 +4,12 @@
   padding: 2rem;
   /* text-align: center; */
   display: grid;
-  /* position: fixed; */
+ 
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+  position: fixed; 
 }
 
 /* .header{display:flex} */
@@ -22,29 +23,81 @@
     background-color:rgba(255, 255, 255, 0.696);
     width: auto;
     border :3px solid black
+   
 }
 
 body {
   background-color: red;
+  border: 20px solid black;
+  border-collapse: collapse;
 }
 
 .container {
   grid-template-columns: 1fr 1fr ;
 
   display: grid;
-
-
-
 }
 
 .header {
-  width: 100%;
+  width: 20%;
   overflow: hidden;
   /* contain floats */
   height: 25px;
   margin-top: 0;
   display: flex;
+  position: relative;
+  animation-name: horse;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: 4;
 }
+
+@keyframes horse {
+
+  0% {background-color: bisque; left: 0px; top: 0px;}
+  25% {background-color: aqua; left: 300px; top: 0px;}
+  50% {background-color: aquamarine; left: 300px; top: 300px;}
+  75% {background-color: aliceblue; left: 0px; top: 300px;}
+  100% {background-color: palevioletred; left: 0px; top: 0px;}
+
+ 
+}
+
+
+
+div.search-bar{
+
+border: 5px solid black;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.search-bar{
+
+  /* background-color: black; */
+  color: white;
+  background-color: red;
+  animation-name:box;
+  position: relative;
+  animation-duration: 10s;
+  animation-delay: 20;
+  animation-iteration-count: 1;
+  width: 50%;
+  height: 40%;
+  text-align:center ;
+}
+
+
+@keyframes box{
+
+
+  0% {background-color: blue;}
+  25% {background-color: gray;}
+  50% {background-color: green;}
+  75% {background-color: black;}
+  100% {background-color: purple;}
+}
+
 
 .videos {
   border: 1px solid grey;

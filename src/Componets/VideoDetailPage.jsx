@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import ShowPage from "./Show";
 
 const VideoDetailPage = () => {
@@ -15,6 +15,8 @@ const VideoDetailPage = () => {
           allowFullScreen
         ></iframe>
       </div>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
       <ShowPage />
     </>
   );
