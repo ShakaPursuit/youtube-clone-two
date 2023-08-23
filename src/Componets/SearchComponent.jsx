@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Videos from './Videos'
 import fetchData from './API'
 
 // async stands for asynchronous and it indicates that the function contained async operations
@@ -20,7 +21,6 @@ const [videos, setVideos] = useState([]);
       setVideos(fetchedVideos)
     }
   }
-
   return (
 
     <div className="search-bar">
@@ -28,7 +28,9 @@ const [videos, setVideos] = useState([]);
         <input type="text" value={searchQuery} onChange={handleSearchChange} placeholder="Search for videos" />
         <button type="submit">Search</button>
       </form>
-
+      {videos.length > 0 ?  null : < Videos />}
+      <br></br><br></br><br></br>
+      <div className="scroll"></div>
       <div className="video-list">
         {videos.map((video) => (
             <div key={video.id.videoId} className="video-item">
