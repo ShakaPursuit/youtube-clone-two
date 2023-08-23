@@ -1,10 +1,11 @@
+
 #root {
   max-width: 1280px;
   /* margin: 0 auto; */
   padding: 2rem;
   /* text-align: center; */
   display: grid;
- 
+  /* position: fixed; */
   left: 0;
   right: 0;
   top: 0;
@@ -14,34 +15,37 @@
 
 /* .header{display:flex} */
 .header {
-  border: 2px solid yellow;
+  
+/* position: fixed; */
+  
   background: var(--dark);
-    border-bottom: 3px solid var(--primary);
-    color: var(--light);
-    padding: 25px 0;
-    text-align: center;
+  
+  border-bottom: 3px solid var(--primary);
+  color: var(--light);
+  padding: 25px 0;
+  text-align: center;
     background-color:rgba(255, 255, 255, 0.696);
     width: auto;
     border :3px solid black
-   
 }
 
 body {
   background-color: red;
-  border: 20px solid black;
-  border-collapse: collapse;
 }
 
-.container {
+/* .container {
   grid-template-columns: 1fr 1fr ;
 
   display: grid;
+
+
+
 }
 
 .header {
   width: 20%;
   overflow: hidden;
-  /* contain floats */
+ 
   height: 25px;
   margin-top: 0;
   display: flex;
@@ -72,9 +76,9 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
-.search-bar{
+. seach-bar {
 
-  /* background-color: black; */
+  /* background-color: black; *
   color: white;
   background-color: red;
   animation-name:box;
@@ -110,4 +114,4 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .icon{height: 50px;position: relative; top: -15px; }
-.comment-section{border:2px solid white;height:50%;}
+.comment-section{border:2px solid white;height:50%;} 

@@ -8,7 +8,7 @@ import Home from "./Componets/HomePage";
 function App() {
   return (
 
-
+    <>
     <Router>
       <TopBar />
       <Routes>
@@ -18,6 +18,7 @@ function App() {
       </Routes>
 
     </Router>
+    </>
   );
 }
 
