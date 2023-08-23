@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
+
 export default function ShowPage() {
   const [value, setValue] = useState("");
   const [commenter, SetCommenter] = useState("");
@@ -50,6 +52,8 @@ export default function ShowPage() {
           ))}
         </div>
       </form>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
     </>
   );
 }
