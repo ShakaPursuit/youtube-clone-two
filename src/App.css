@@ -1,22 +1,16 @@
 
 #root {
-
-  
   max-width: 100%;
   margin: 0 ;
-  /* padding: 2rem; */
   text-align: center;
-  /* display: grid; */
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
 }
 
-/* .header{display:flex} */
+
 .header {
-  
-/* position: fixed; */
   
   background: var(--dark);
   
@@ -34,15 +28,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
-/* .container {
-  grid-template-columns: 1fr 1fr ;
-
-  display: grid;
-
-
-
-} */
 
 .header {
   width: 100%;
