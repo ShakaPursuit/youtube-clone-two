@@ -1,5 +1,5 @@
 import SearchBar from "./SearchComponent";
-import Videos from "./Videos";
+
 
 function Home() {
   return (
@@ -14,9 +14,6 @@ function Home() {
         <br></br>
         <br></br>
 
-        <section>
-          <Videos />
-        </section>
       </main>
     </>
   );
