@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import Videos from "./Videos";
 import fetchData from "./API";
 
-// async stands for asynchronous and it indicates that the function contained async operations
-// await is used within an async function to pause the execution of the function until a promise is returned
-// in this example the function is paused when fetchData is fetching data from the API \
-const SearchComponent = () => {
+const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [videos, setVideos] = useState([]);
 
@@ -54,4 +51,4 @@ const SearchComponent = () => {
   );
 };
 
-export default SearchComponent;
+export default SearchBar;
