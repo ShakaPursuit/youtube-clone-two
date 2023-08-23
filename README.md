@@ -20,3 +20,7 @@ API
 // regionCode : Returns results for a specific country or region. I.E (regionCode=US)
 // relatedToVideoId : Returns videos related to a specific video. I.E (relatedtoVideoId=OIS231)
 // topicId : Returns videos that match a specific youtube topic ID.
+
+// async stands for asynchronous and it indicates that the function contained async operations
+// await is used within an async function to pause the execution of the function until a promise is returned
+// in this example the function is paused when fetchData is fetching data from the API \

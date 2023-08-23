@@ -4,8 +4,6 @@ import Videos from "./Videos";
 function Home() {
   return (
     <>
-     
-
       <main className="wrapper">
         <br></br>
 
