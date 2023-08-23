@@ -1,29 +1,28 @@
-
 import SearchBar from "./SearchBar";
-
 import TopBar from "./TopBar";
 import Videos from "./Videos";
 
-function Home(){
+function Home() {
+  return (
+    <>
+      <TopBar />
 
-return(<>
-<TopBar/>
+      <main className="wrapper">
+        <br></br>
 
+        <section>
+          <SearchBar />
+        </section>
 
-<main className="wrapper">
-    <br></br>
+        <br></br>
+        <br></br>
 
-   <section><SearchBar/></section> 
-
-   <br></br><br></br>
-
-
-   <section><Videos/></section>
-
-</main>
-
-</>);
-
+        <section>
+          <Videos />
+        </section>
+      </main>
+    </>
+  );
 }
 
-export default Home
+export default Home;

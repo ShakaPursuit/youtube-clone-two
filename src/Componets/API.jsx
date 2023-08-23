@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 /**************** Optional Parameters *************** */
 /***** Search Parameters *****/
 // q (Query Parameter) : API will return videos that match query terms. I.E (q=funny dogs will return funny dogs related videos)
@@ -14,18 +14,19 @@ import axios from 'axios';
 // relatedToVideoId : Returns videos related to a specific video. I.E (relatedtoVideoId=OIS231)
 // topicId : Returns videos that match a specific youtube topic ID.
 
-const apiKey = import.meta.env.VITE_REACT_APP_API_KEY
+const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
 
 const fetchData = async (searchQuery) => {
-    try {
-        const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${searchQuery}%20&type=video&part=snippet&maxResults=8`)
-        const videos = response.data.items;
-        return videos;
-    } catch (error) {
-        console.error('Error fetching videos:', error)
-        return []
-    }
-}
+  try {
+    const response = await axios.get(
+      `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${searchQuery}%20&type=video&part=snippet&maxResults=8`
+    );
+    const videos = response.data.items;
+    return videos;
+  } catch (error) {
+    console.error("Error fetching videos:", error);
+    return [];
+  }
+};
 
-export default fetchData
-
+export default fetchData;
