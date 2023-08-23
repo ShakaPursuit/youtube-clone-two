@@ -1,45 +1,24 @@
+import AboutPage from "./AboutPage";
+import Home from "./HomePage";
+import VideoDetailPage from "./VideoDetailPage";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import "./App.css"
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.css'
-import SearchComponent from './SearchComponent'
-import VideoDetailPage from './ShowPage'
-
-
-
-
-import Home from './HomePage'
 
 
 function App() {
- 
   return (
 
+
     <Router>
-
-    <div className="top"><Home/></div> 
-
-        {/* <NavBar/> */}
-        
-   
-     
-   
-     
-     
-     <Routes>
-  <Route path="/" element={<SearchComponent />} />
-  <Route path="/video/:videoId" element={<VideoDetailPage />} />
-  </Routes>
-   </Router>
-   
-
-  )
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/video/:videoId" element={<VideoDetailPage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
-
-
-
-
-
-
+export default App;
 
