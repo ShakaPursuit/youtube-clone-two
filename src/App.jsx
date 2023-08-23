@@ -7,6 +7,8 @@ import Home from "./Componets/HomePage";
 
 function App() {
   return (
+
+
     <Router>
       <TopBar />
       <Routes>
@@ -14,8 +16,10 @@ function App() {
         <Route path="/video/:videoId" element={<VideoDetailPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
+
     </Router>
   );
 }
 
 export default App;
+
