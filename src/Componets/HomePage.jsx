@@ -1,20 +1,29 @@
-// import SearchComponent from "./SearchComponent";
 
-//  function Home(){
+import SearchBar from "./SearchBar";
 
-// return(<>
+import TopBar from "./TopBar";
+import Videos from "./Videos";
 
-// <main className="wrapper">
-//     <br></br>
+function Home(){
 
-//    <section><SearchComponent/></section> 
+return(<>
+<TopBar/>
 
-//    <br></br><br></br>
 
-// </main>
+<main className="wrapper">
+    <br></br>
 
-// </>);
+   <section><SearchBar/></section> 
 
-// }
+   <br></br><br></br>
 
-// export default Home
+
+   <section><Videos/></section>
+
+</main>
+
+</>);
+
+}
+
+export default Home
