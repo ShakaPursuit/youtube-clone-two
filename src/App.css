@@ -18,6 +18,18 @@
     background-color:rgba(255, 255, 255, 0.696);
     width: auto;
     border :3px solid black;
+    animation-name: cat;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    animation-iteration-count: 4;
+}
+
+@keyframes cat{
+  0% {background-color: rgb(26, 255, 0);}
+  25% {background-color: rgba(255, 228, 196, 0.639);}
+  50% {background-color: rgba(159, 159, 198, 0.871);}
+  75% {background-color: rgba(198, 43, 226, 0.38);}
+  100% {background-color: rgba(0, 0, 255, 0.707);}
 }
 
 body {
@@ -33,7 +45,10 @@ body {
   height: 25px;
   margin-top: 0;
   display: flex;
+
 }
+
+
 
 .videos {
   border: 1px solid grey;
@@ -47,3 +62,23 @@ body {
 
 .icon{height: 50px;position: relative; top: -15px; }
 .comment-section{border:2px solid white;height:50%;}
+
+.animation {
+   
+  text-align: center;
+  position: relative;
+  animation-name: horse;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: 4;
+}
+
+@keyframes horse {
+
+0%  { left: 0px; top: 0px;}
+25% { left: 400px; top: 0px;}
+50% { left: 400px; top: 400px;}
+75% { left: 0px; top: 400px;}
+100% {left: 0px; top: 0px;}
+
+}
