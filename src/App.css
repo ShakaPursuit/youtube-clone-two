@@ -63,6 +63,28 @@ body {
 .icon{height: 50px;position: relative; top: -15px; }
 .comment-section{border:2px solid white;height:50%;}
 
+
+.animation {
+   
+  text-align: center;
+  position: relative;
+  animation-name: horse;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: 4;
+}
+
+@keyframes horse {
+
+0%  { left: 0px; top: 0px;}
+25% { left: 400px; top: 0px;}
+50% { left: 400px; top: 400px;}
+75% { left: 0px; top: 400px;}
+100% {left: 0px; top: 0px;}
+
+}
+
+
 .animation {
    
   text-align: center;

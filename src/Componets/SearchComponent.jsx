@@ -83,3 +83,12 @@ const [displayOrder, setDisplayOrder] = useState('relevance');
   )
 }
 export default SearchBar;
+
+
+
+
+
+
+
+
+
