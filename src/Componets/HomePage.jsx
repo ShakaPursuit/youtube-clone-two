@@ -14,10 +14,7 @@ function Home() {
         <br></br>
         <br></br>
 
-<<<<<<< HEAD
-=======
         
->>>>>>> 80e10ecf268a3cc8dca8bb102f009e2b62e84abb
       </main>
     </>
   );
