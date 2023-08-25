@@ -10,6 +10,7 @@ function AboutPage() {
           CSS<br></br>
           Refactored into Components<br></br>
           Comment Section<br></br>
+          Searchhistory/localStorage
         </li>
         <h2>Jamal</h2>
         <p>https://github.com/JamalDunn23/</p>

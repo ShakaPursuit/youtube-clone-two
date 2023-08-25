@@ -2,6 +2,8 @@ import SearchBar from "./SearchComponent";
 
 
 function Home() {
+
+  
   return (
     <>
       <main className="wrapper">

@@ -1,18 +1,32 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Videos from './Videos'
 import fetchData from './API'
+// import React from 'react'
+
+const historyFromLocalStorage=JSON.parse(localStorage.getItem('history')||'[]')//this parses and returns the local storage set to variable
 const SearchBar = () => {
-const [searchQuery, setSearchQuery] = useState('')
-const [videos, setVideos] = useState([]);
-const [maxResults, setMaxResults] = useState(0);
-const [displayOrder, setDisplayOrder] = useState('relevance');
+  
+  const [searchQuery, setSearchQuery] = useState('')
+  const [videos, setVideos] = useState([]);
+  const [maxResults, setMaxResults] = useState(0);
+  const [displayOrder, setDisplayOrder] = useState('relevance');
+  const[history,setHistory]=useState('');
+  const[historyArr,setHistoryArr]=useState(historyFromLocalStorage);// setting historyArr state to the local storage
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
+  
+  
+  
+  
   const handleSearchSubmit = async (event) => {
     event.preventDefault();
     if (searchQuery) {
+      
+    }
+    
+      
       let order = displayOrder;
       if (displayOrder === 'viewCountHigh') {
         order = 'viewCount';
@@ -22,19 +36,36 @@ const [displayOrder, setDisplayOrder] = useState('relevance');
       const fetchedVideos = await fetchData(searchQuery, maxResults, order)
       console.log("fetchedVideos:", fetchedVideos)
       setVideos(fetchedVideos)
-    }
-  }
-  const handleMaxResultsChange = (event) => {
-    const newValue = parseInt(event.target.value);
-    if (!isNaN(newValue) && newValue >= 1) {
-      setMaxResults(newValue);
-    }
-  };
-  const handleDisplayOrderChange = (event) => {
-    setDisplayOrder(event.target.value);
-  };
-  return (
-    <div className="search-bar">
+      setHistory(searchQuery)
+      setHistoryArr((prevArr) => [...prevArr,searchQuery]);}
+
+  
+  
+  useEffect(() => {
+      window.localStorage.setItem("history",
+       JSON.stringify(historyArr),[historyArr] );//using hook to catch the data
+    });
+      
+     
+
+       
+            
+        
+        
+        
+        const handleMaxResultsChange = (event) => {
+          const newValue = parseInt(event.target.value);
+          if (!isNaN(newValue) && newValue >= 1) {
+            setMaxResults(newValue);
+          }
+        };
+        const handleDisplayOrderChange = (event) => {
+          setDisplayOrder(event.target.value);
+        };
+        
+        
+        return (
+          <div className="search-bar">
       <form onSubmit={handleSearchSubmit}>
         <input
         type="text"
@@ -49,7 +80,7 @@ const [displayOrder, setDisplayOrder] = useState('relevance');
         placeholder="Max Results"
         min="1"
       />
-        <button type="submit">Search</button>
+        <button type="submit" >Search</button>
         <select value={displayOrder} onChange={handleDisplayOrderChange}>
         <option value="relevance">Relevance</option>
         <option value="date">Date</option>
@@ -58,10 +89,19 @@ const [displayOrder, setDisplayOrder] = useState('relevance');
         <option value="viewCountLow">View Count (Lowest First)</option>
       </select>
       </form>
+      <label>Search History</label>
+      <div key={"history"}className='search-History'>{([...historyArr+""])}
+      
+      
+      </div>
       {videos.length > 0 ?  null : < Videos />}
       <br></br><br></br><br></br>
+      <div className='container'>
+
+     
       <div className="video-list">
         {videos.map((video) => (
+          <div className='scroll-menu'>
             <div key={video.id.videoId} className="video-item">
                 <Link to={`/video/${video.id.videoId}`}>
                     <img src={video.snippet.thumbnails.default.url} alt={video.snippet.title} />
@@ -77,9 +117,12 @@ const [displayOrder, setDisplayOrder] = useState('relevance');
                     )}
                 </Link>
                 </div>
+                </div>
         ))}
       </div>
-    </div>
+        </div>
+      </div>
+   
   )
 }
 export default SearchBar;
