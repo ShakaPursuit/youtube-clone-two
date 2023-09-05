@@ -1,6 +1,6 @@
 #root {
 
-  /* width:1100px; */
+
    margin: auto;
   
   max-width: 100%;
@@ -8,7 +8,7 @@
   text-align: center;
   left: 0;
   display: grid;
-  /* min-width: 600px */
+  min-width: 400px
   
 ;
 }
@@ -41,6 +41,8 @@ body {
   background-color: red;
   width: 100%;
   height: 100%;
+  min-width: 400px;
+
 
  
 
@@ -69,7 +71,7 @@ body {
 }
 
 .icon{height: 50px;position: relative; top: -15px; }
-.comment-section{border:2px solid white;height:50%;}
+.comment-section{border:2px solid white;}
 
 
 .animation {
@@ -114,31 +116,22 @@ body {
 }
 
 .video-item{border:2px solid black; width :750px;padding:20px; border-radius: 25px;
-text-align: center;background-color:white;display: flex;
-grid-template-rows: 1fr;margin: auto;
+text-align: center;background-color:white;
+margin: auto;
 width: 50%;
-padding: 10px;height: 450px;}
-
-
-/* .container {
-  columns: 2;
-
-  
+padding: 10px;height: 450px;display: grid;
+justify-content: center;}
+/* #scroll-menu{flex-wrap: wrap; background-color: black; } */
 
 
 
-} */
 .video-item {
-    box-shadow: inset 0 0 0 0 #54b3d6;
-    color: #54b3d6;
-    margin: 0 -.25rem;
-    padding: 0 .25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-    width:315px;
-    margin-left: 150px;
-    min-width: 400px;
-    /* position: absolute */
-  } 
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+}
   .video-item:hover {
     box-shadow: inset 100px 0 0 0 #54b3d6;
     color: white;
@@ -162,6 +155,11 @@ display: flex;}
   and (min-resolution: 192dpi) { 
 }
 
+@media screen and (max-width: 600px) {
+  .video-list {
+    width: 100%;
+  }
+}
 /* main.wrapper{display: grid;
 grid-template-columns: 1fr ;
 grid-template-rows: 1fr 1fr;}

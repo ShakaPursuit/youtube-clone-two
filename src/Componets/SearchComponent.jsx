@@ -2,10 +2,16 @@ import { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Videos from './Videos'
 import fetchData from './API'
-// import React from 'react'
 
-const historyFromLocalStorage=JSON.parse(localStorage.getItem('history')||'[]')//this parses and returns the local storage set to variable
+
+const historyFromLocalStorage=JSON.parse(sessionStorage.getItem('history')||'[]')//this parses and returns the local storage set to variable
+
+console.log(historyFromLocalStorage)
 const SearchBar = () => {
+  useEffect(() => {
+    window.sessionStorage.setItem("history",
+     JSON.stringify(historyArr),[historyArr] );//using hook to catch the data
+  });
   
   const [searchQuery, setSearchQuery] = useState('')
   const [videos, setVideos] = useState([]);
@@ -36,15 +42,33 @@ const SearchBar = () => {
       const fetchedVideos = await fetchData(searchQuery, maxResults, order)
       console.log("fetchedVideos:", fetchedVideos)
       setVideos(fetchedVideos)
-      setHistory(searchQuery)
-      setHistoryArr((prevArr) => [...prevArr,searchQuery]);}
+      // setHistory(searchQuery)
+      setHistoryArr((prevArr) => [...prevArr,searchQuery]);
+    
+    }
 
   
   
-  useEffect(() => {
-      window.localStorage.setItem("history",
-       JSON.stringify(historyArr),[historyArr] );//using hook to catch the data
-    });
+  // useEffect(() => {
+  //     window.sessionStorage.setItem("history",
+  //      JSON.stringify(historyArr),[historyArr] );//using hook to catch the data
+  //   },);
+      //when pressing refresh then back  icon local storage stays
+
+      //when pressing About link then back icon local storage stays
+
+      // when pressing refesh by itself the local storage stays
+
+      //when pressing home link the local storage deletes the last index key val pair
+
+ 
+
+
+
+
+      
+
+
       
      
 
@@ -66,22 +90,24 @@ const SearchBar = () => {
         
         return (
           <div className="search-bar">
-      <form onSubmit={handleSearchSubmit}>
-        <input
+      <form  id="form" onSubmit={handleSearchSubmit}>
+       <label> 🔍&nbsp;  <input
+       name='Search'
         type="text"
         value={searchQuery}
         onChange={handleSearchChange}
         placeholder="Search for videos"
-        />
-        <input
+        /></label> 
+       <br></br> <label >#️⃣ of 🎥 <input
+        name='resultCount'
         type="number"
         value={maxResults}
         onChange={handleMaxResultsChange}
         placeholder="Max Results"
         min="1"
-      />
-        <button type="submit" >Search</button>
-        <select value={displayOrder} onChange={handleDisplayOrderChange}>
+      />&nbsp;&nbsp;&nbsp;</label>
+        <button type="submit" >Search</button><br></br>
+        <select id={"relevance"} value={displayOrder} onChange={handleDisplayOrderChange}>
         <option value="relevance">Relevance</option>
         <option value="date">Date</option>
         <option value="title">Title</option>
@@ -89,19 +115,19 @@ const SearchBar = () => {
         <option value="viewCountLow">View Count (Lowest First)</option>
       </select>
       </form>
-      <label>Search History</label>
-      <div key={"history"}className='search-History'>{([...historyArr+""])}
-      
+      <legend id="search-history" >Search History
+      <div  id="search-history"className='search-History' name="search-History">{([...historyArr+""])}
       
       </div>
+      </legend>
       {videos.length > 0 ?  null : < Videos />}
       <br></br><br></br><br></br>
       <div className='container'>
 
      
-      <div className="video-list">
+      <div className="video-list" key={Math.random()*1000}>
         {videos.map((video) => (
-          <div className='scroll-menu'>
+          <div className='scroll-menu' key={Math.random()*1000}>
             <div key={video.id.videoId} className="video-item">
                 <Link to={`/video/${video.id.videoId}`}>
                     <img src={video.snippet.thumbnails.default.url} alt={video.snippet.title} />

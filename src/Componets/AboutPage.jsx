@@ -30,6 +30,7 @@ function AboutPage() {
         <li>
           API<br></br>
           Refactored into Components
+          Routes/Path
         </li>
     </div>
   )

@@ -7,7 +7,7 @@ export default function TopBar() {
       </li>
       <br></br>
       <br></br>&nbsp;
-      <li>
+      <li >
         <Link to="/">Home</Link>
       </li>
       <br></br>&nbsp;
