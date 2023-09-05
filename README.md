@@ -24,3 +24,11 @@ API
 // async stands for asynchronous and it indicates that the function contained async operations
 // await is used within an async function to pause the execution of the function until a promise is returned
 // in this example the function is paused when fetchData is fetching data from the API \
+
+SiteDeployment(https://64f6b1f57df7e30008dc7156--effervescent-fairy-680d25.netlify.app/
+
+
+
+
+
+)
