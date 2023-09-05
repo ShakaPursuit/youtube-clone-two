@@ -6,7 +6,7 @@ const VideoDetailPage = () => {
 
   return (
     <>
-      <div className="single-video">
+      <div className="single-video" key={Math.random()*1000}>
         <iframe
           width="560"
           height="315"
@@ -15,8 +15,7 @@ const VideoDetailPage = () => {
           allowFullScreen
         ></iframe>
       </div>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
+      
       <ShowPage />
     </>
   );

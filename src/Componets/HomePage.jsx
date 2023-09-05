@@ -10,7 +10,7 @@ function Home() {
         <br></br>
 
         <section>
-          <SearchBar />
+          <SearchBar key={Math.random()*1000}/>
         </section>
 
         <br></br>

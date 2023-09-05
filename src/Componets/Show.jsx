@@ -23,7 +23,7 @@ export default function ShowPage() {
   return (
     <>
       <form>
-        <div className="comment-section">
+        <div className="comment-section" key={Math.random()*1000}>
           <h4>Comment Section</h4>
           <br></br>
           <label>Name</label>
@@ -52,8 +52,7 @@ export default function ShowPage() {
           ))}
         </div>
       </form>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
+      
     </>
   );
 }
